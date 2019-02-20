@@ -1,0 +1,4 @@
+<div class="categories" mat-button [matMenuTriggerFor]="animals">Categories</div>
+<mat-menu #animals="matMenu">
+  <button *ngFor="let item of categories" mat-menu-item>{{item}}</button>
+</mat-menu>

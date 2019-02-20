@@ -4,15 +4,21 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './pages/PageNotFound/component/page-not-found/page-not-found.component';
+import { ShareModule } from './shared/share.module';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { MainModule } from './pages/Main/main.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
-    BrowserModule,
+    // BrowserModule,
     AppRoutingModule,
+    ShareModule,
+    NoopAnimationsModule,
+    MainModule
   ],
   providers: [],
   bootstrap: [AppComponent]
