@@ -2,18 +2,20 @@
   <div class="img-container">
     <img class="img-logo" src="../../../../../assets/logo.png" alt="">
   </div>
-
-  <div class="login-form">
+  
+  <form class="login-form" [formGroup]="loginForm">
     <label class="label-form">{{labelUsername}}</label>
-    <input type="text" class="form-control" placeholder="{{placeholderUsername}}">
-    <div class="error">{{errorMessageUsername}}</div>
+    <input type="text" class="form-control" placeholder="{{placeholderUsername}}" formControlName="username">
+    <div class="error" [hidden]="username.valid || username.untouched">
+      {{errorMessageUsername}}
+    </div>
     <br>
     <label class="label-form">{{labelPassword}}</label>
-    <input type="password" class="form-control" placeholder="{{placeholderPassword}}">
-    <div class="error">{{errorMessagePassword}}</div>
+    <input type="password" class="form-control" placeholder="{{placeholderPassword}}" formControlName="password">
+    <div class="error" [hidden]="password.valid || password.untouched">{{errorMessagePassword}}</div>
     <br>
     <div class="btn-login-container">
-        <button class="btn btn-primary btn-login">Login</button>
+        <button class="btn btn-primary btn-login" [disabled]="loginForm.invalid">Login</button>
     </div>
-  </div>
+  </form>
 </div>
