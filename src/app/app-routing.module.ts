@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { PageNotFoundComponent } from './pages/PageNotFound/component/page-not-found/page-not-found.component';
 import { AuthGuard } from './guard/auth-guard.service';
 import { MainPaigeGuard } from './guard/main-paige-guard.services';
-import { LayoutComponent } from './pages/Main/component/layout/layout.component';
 
 const routes: Routes = [
   {
@@ -18,18 +17,7 @@ const routes: Routes = [
   {
     path: 'main',
     canActivate: [MainPaigeGuard],
-    component: LayoutComponent,
-    children: [
-      {
-        path: '',
-        redirectTo: 'product',
-        pathMatch: 'full'
-      },
-      {
-        path: 'product',
-        loadChildren: './pages/Product/product.module#ProductModule'
-      }
-    ]
+    loadChildren: './pages/Main/main.module#MainModule',
   },
   {
     path: '**',

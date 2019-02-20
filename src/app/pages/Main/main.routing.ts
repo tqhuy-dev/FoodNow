@@ -5,7 +5,18 @@ import { LayoutComponent } from './component/layout/layout.component';
 const routes: Routes = [
     {
         path: '',
-        component: LayoutComponent
+        component: LayoutComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'product',
+                pathMatch: 'full'
+            },
+            {
+                path: 'product',
+                loadChildren: './pages/Product/product.module#ProductModule'
+            }
+        ]
     }
 ];
 
