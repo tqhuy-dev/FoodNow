@@ -15,8 +15,9 @@
     <div class="error" [hidden]="password.valid || password.untouched">{{errorMessagePassword}}</div>
     <br>
     <div class="btn-login-container">
-        <button class="btn btn-primary btn-login" [disabled]="loginForm.invalid">Login</button>
+        <button class="btn btn-primary btn-login" [disabled]="loginForm.invalid" (click)="doAuth()">Login</button>
     </div>
-    <div class="link-to-register">Create an account</div>
+    <br>
+    <div class="link-to-register" (click)="linkToRegister()">Create an account</div>
   </form>
 </div>

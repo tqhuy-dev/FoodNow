@@ -1,0 +1,34 @@
+<div class="flex-container">
+    <div class="img-container">
+      <img class="img-logo" src="../../../../../assets/logo.png" alt="">
+    </div>
+    
+    <form class="register-form" [formGroup]="registerForm">
+      <label class="label-form">{{labelUsername}}</label>
+      <input type="text" class="form-control" placeholder="{{placeholderUsername}}" formControlName="username">
+      <div class="error" [hidden]="username.valid || username.untouched">
+        {{errorMessageUsername}}
+      </div>
+      <br>
+      <label class="label-form">{{labelPassword}}</label>
+      <input type="password" class="form-control" placeholder="{{placeholderPassword}}" formControlName="password">
+      <div class="error" [hidden]="password.valid || password.untouched">{{errorMessagePassword}}</div>
+
+      <label class="label-form">Your Full Name</label>
+      <div class="row">
+        <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="FirstName" formControlName="firstName">
+        </div>
+        <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="LastName" formControlName="lastName">
+        </div>
+      </div>
+
+      <br>
+      <div class="btn-login-container">
+          <button class="btn btn-primary btn-login" [disabled]="registerForm.invalid" (click)="doAuth()" >Signin</button>
+      </div>
+      <br>
+      <div class="link-to-login" (click)="backToLogin()">Back to login</div>
+    </form>
+  </div>
