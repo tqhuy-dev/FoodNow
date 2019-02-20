@@ -1,4 +1,4 @@
-import { ConstantValue } from './constant';
+import { ConstantValue } from '../constant/constant';
 import { FormControl, Validators } from '@angular/forms';
 
 export class AuthComponent {
