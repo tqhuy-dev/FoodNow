@@ -1,0 +1,46 @@
+$size-logo:70%;
+$margin-btn:30%;
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+
+  .img-container {
+    text-align: center;
+
+    .img-logo {
+      max-width: $size-logo;
+      max-height: $size-logo;
+    }
+  }
+
+  .login-form {
+    border-radius: 0.5rem;
+    padding: 20px;
+    box-shadow: rgba(129, 2, 91, 0.884) 3px 3px 3px 3px;
+
+    .error{
+      color: red;
+      font-size: 15px;
+    }
+
+    .label-form {
+      font-weight: bold;
+    }
+
+    .btn-login-container {
+        text-align: center;
+
+      .btn-login {
+        background-color: rgba(129, 2, 91, 0.884);
+        border-radius: 0.5rem;
+        padding: 10px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        width: 70%;
+      }
+    }
+
+  }
+}
