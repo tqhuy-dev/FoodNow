@@ -40,4 +40,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  login() {
+    sessionStorage.setItem('token', '123456789');
+  }
+
 }
