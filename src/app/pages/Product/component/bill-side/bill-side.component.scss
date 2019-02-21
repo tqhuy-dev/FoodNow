@@ -1,3 +1,27 @@
-.bill-side-container{
-    background-color: blueviolet;
+:host{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+    .bill-container{
+        margin-top: 20px;
+
+        .total{
+            font-size: 20px;
+        }
+
+        .price{
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .check-out{
+            background-color:rgba(129, 2, 91, 0.884);
+            text-align: center;
+            color: white;
+            border-radius: 10px;
+            padding: 20px;
+            cursor: pointer;
+        }
+    }
 }

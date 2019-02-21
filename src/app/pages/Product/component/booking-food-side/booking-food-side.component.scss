@@ -3,10 +3,19 @@
     flex-direction: column;
     justify-content: space-between;
 
-    .price{
+    .cart{
         text-align: center;
         padding: 10px;
         font-weight: bold;
+        cursor: pointer;
+        color: white;
+        &.no-on-cart{
+            background-color: rgb(21, 226, 31);
+        }
+
+        &.on-cart{
+            background-color: rgb(255, 43, 43);
+        }
     }
 
     .booking-food{
