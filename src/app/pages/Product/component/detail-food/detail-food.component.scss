@@ -1,0 +1,31 @@
+.food-detail-container{
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    .material{
+        font-size: 12px;
+    }
+
+    .name-food{
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .detail-rate-container{
+        display: flex;
+        flex-direction: row;
+
+        .best-seller-label{
+            font-size: 12px;
+            background-color: rgb(255, 215, 38);
+            padding: 2px 4px;
+            color:rgb(36, 36, 36);
+        }
+
+        div{
+            font-size: 15px;
+            margin-right:20px;
+        }
+    }
+}

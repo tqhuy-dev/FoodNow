@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ConstantValue } from 'src/app/shared/constant/constant';
 import { FormControl, FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthComponent } from 'src/app/shared/parent-component/auth';

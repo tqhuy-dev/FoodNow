@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-menu-location',
@@ -7,7 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuLocationComponent implements OnInit {
 
-  location = ['Phan Xich Long' , 'Nguyen Hue' , 'Ho Ban Nguyet' , 'Thu Duc' , 'Khu Cong Nghe Cao'];
+  @Input() placeHolderMenu = '';
+  @Input() itemArray = [];
   constructor() { }
 
   ngOnInit() {

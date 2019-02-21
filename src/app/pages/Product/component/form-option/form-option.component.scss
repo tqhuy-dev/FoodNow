@@ -1,0 +1,13 @@
+.form-option-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+    .option-item{
+        display: flex;
+        flex-direction: column;
+    }
+}
+:host{
+    margin-top: 1rem;
+}

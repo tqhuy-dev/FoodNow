@@ -1,0 +1,19 @@
+$img-size: 25%;
+
+.item-food-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+
+    img{
+        width: $img-size;
+        height: $img-size;
+        object-fit: cover;
+    }
+
+    app-detail-food{
+        flex: 1;
+    }
+
+}

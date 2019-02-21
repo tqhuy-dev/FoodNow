@@ -4,7 +4,6 @@ import { FormBuilder , Validators , FormControl , FormGroup} from '@angular/form
 import { AuthComponent } from 'src/app/shared/parent-component/auth';
 import { AuthStrategy } from 'src/app/shared/interface/IAuth';
 import { Router } from '@angular/router';
-import { TouchSequence } from 'selenium-webdriver';
 
 @Component({
   selector: 'app-register',

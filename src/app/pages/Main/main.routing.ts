@@ -14,7 +14,19 @@ const routes: Routes = [
             },
             {
                 path: 'product',
-                loadChildren: './pages/Product/product.module#ProductModule'
+                loadChildren: '../../pages/Product/product.module#ProductModule'
+            },
+            {
+                path: 'cart',
+                loadChildren: '../../pages/Cart/cart.module#CartModule'
+            },
+            {
+                path: 'information',
+                loadChildren: '../../pages/Information/information.module#InformationModule'
+            },
+            {
+                path: 'log',
+                loadChildren: '../../pages/Log/log.module#LogModule'
             }
         ]
     }

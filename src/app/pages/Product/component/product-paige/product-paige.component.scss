@@ -1,0 +1,16 @@
+$padding-container-root: 10%;
+
+.product-container-root{
+    padding-left: $padding-container-root;
+    padding-right: $padding-container-root;
+    display: flex;
+    flex-direction: row;
+
+    app-product-side{
+        flex: 3;
+    }
+
+    app-bill-side{
+        flex: 1;
+    }
+}
