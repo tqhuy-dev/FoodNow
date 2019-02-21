@@ -10,16 +10,27 @@ import { ItemFoodComponent } from '../Product/component/item-food/item-food.comp
 import { ListFoodComponent } from '../Product/component/list-food/list-food.component';
 import { DetailFoodComponent } from '../Product/component/detail-food/detail-food.component';
 import { BookingFoodSideComponent } from '../Product/component/booking-food-side/booking-food-side.component';
+import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
     imports: [
         ShareModule,
         ProductRoutingModule,
-        AngularMaterialModule
+        AngularMaterialModule,
+        NgbPaginationModule
     ],
     exports: [],
-    declarations: [ProductPaigeComponent, ProductSideComponent, BillSideComponent, FormOptionComponent, ItemFoodComponent, ListFoodComponent, DetailFoodComponent, BookingFoodSideComponent],
+    declarations: [
+        ProductPaigeComponent,
+        ProductSideComponent,
+        BillSideComponent,
+        FormOptionComponent,
+        ItemFoodComponent,
+        ListFoodComponent,
+        DetailFoodComponent,
+        BookingFoodSideComponent
+    ],
     providers: [],
 })
 export class ProductModule { }

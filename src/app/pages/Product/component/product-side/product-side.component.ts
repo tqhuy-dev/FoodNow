@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductSideComponent implements OnInit {
 
+  page = 4;
   constructor() { }
 
   ngOnInit() {
