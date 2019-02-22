@@ -6,6 +6,15 @@ function AuthResponse(statusCode , message , token){
     }
 }
 
+function DataResponse(statusCode,message , data){
+    return {
+        statusCode: statusCode,
+        message: message,
+        data: data
+    }
+
+}
 module.exports = {
-    AuthResponse:AuthResponse
+    AuthResponse:AuthResponse,
+    DataResponse: DataResponse
 }

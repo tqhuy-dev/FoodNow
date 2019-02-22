@@ -7,6 +7,7 @@ const bodyParser = require('body-parser')
 const cors = require('cors');
 
 const userController = require('./Controller/userController');
+const foodController = require('./Controller/foodController');
 
 app.use(morgan('dev'))
 app.use(cors());
@@ -40,7 +41,7 @@ app.get('/api/v1/foodnow' , (req , res , next) =>{
 
 
 app.use('/api/v1/foodnow/user' , userController);
-
+app.use('/api/v1/foodnow/food' , foodController);
 
 app.use((req , res , next) => {
     next({
