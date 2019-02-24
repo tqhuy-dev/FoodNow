@@ -1,3 +1,8 @@
 <div class="menu-container">
-  <div *ngFor="let item of menuItem" class="menu-item" routerLink="{{item}}" routerLinkActive="router-link-active" >{{item | titlecase}}</div>
+  <div class = "menu-paiges">
+    <div *ngFor="let item of menuItem" class="menu-item" routerLink="{{item}}" routerLinkActive="router-link-active" >{{item | titlecase}}</div>
+  </div>
+  <div class="menu-paiges">
+    <div class="menu-item">Log out</div>
+  </div>
 </div>

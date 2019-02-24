@@ -1,17 +1,24 @@
-.menu-container{
+.menu-container {
+  display: flex;
+  flex-direction: row;
+  background-color: white;
+  justify-content: space-between;
+  box-shadow: rgba(170, 170, 170, 0.884) 3px 3px 3px 3px;
+
+  .menu-paiges {
     display: flex;
     flex-direction: row;
-    background-color: white;
     justify-content: center;
-    box-shadow: rgba(170, 170, 170, 0.884) 3px 3px 3px 3px;
 
-    .menu-item{
-        height: 100%;
-        padding: 10px;
-        cursor: pointer;
+    .menu-item {
+      height: 100%;
+      padding: 10px;
+      cursor: pointer;
     }
 
-    .menu-item:hover{
-        background-color: rgb(224, 224, 224)
+    .menu-item:hover {
+      background-color: rgb(224, 224, 224)
     }
+  }
+
 }
