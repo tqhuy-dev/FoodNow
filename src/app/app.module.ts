@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './pages/PageNotFound/component/page-not-f
 import { ShareModule } from './shared/share.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MainModule } from './pages/Main/main.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { MainModule } from './pages/Main/main.module';
     AppRoutingModule,
     ShareModule,
     NoopAnimationsModule,
-    MainModule
+    MainModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -19,6 +19,10 @@ $margin-btn:30%;
     padding: 20px;
     box-shadow: rgba(129, 2, 91, 0.884) 3px 3px 3px 3px;
 
+    .login-status{
+      text-align: center;
+      color: red;
+    }
     .error{
       color: red;
       font-size: 15px;

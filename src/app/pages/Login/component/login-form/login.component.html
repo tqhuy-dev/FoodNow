@@ -14,6 +14,7 @@
     <input type="password" class="form-control" placeholder="{{placeholderPassword}}" formControlName="password">
     <div class="error" [hidden]="password.valid || password.untouched">{{errorMessagePassword}}</div>
     <br>
+    <div class="login-status" [hidden]="isLoginFail">Oops! Your Account is not exist</div>
     <div class="btn-login-container">
         <button class="btn btn-primary btn-login" [disabled]="loginForm.invalid" (click)="doAuth()">Login</button>
     </div>
