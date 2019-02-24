@@ -15,7 +15,6 @@ export class AuthService {
         return new Promise((resolve, reject) => {
             this.httpClient.post(ApiConstant.BASE_URL + ApiConstant.LOGIN_API, body)
                 .subscribe((data: IResponse) => {
-                    console.log(data);
                     resolve(data.token);
                 });
         });

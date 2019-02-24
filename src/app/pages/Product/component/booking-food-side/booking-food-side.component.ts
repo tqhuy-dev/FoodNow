@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ProductService } from 'src/app/services/ProductServices.services';
+import { IFood } from 'src/app/shared/interface/IFood.interface';
 
 @Component({
   selector: 'app-booking-food-side',
@@ -7,9 +9,34 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BookingFoodSideComponent implements OnInit {
 
-  constructor() { }
-
+  @Input() dataFood: IFood = {
+    ID: '',
+    IDStore: '',
+    name: '',
+    price: 0,
+    trend: 0,
+    type: '',
+    totalBooking: 0,
+    status: 0,
+    total: 0
+  };
+  constructor(
+    private productServices: ProductService
+  ) { }
+  total = 0;
   ngOnInit() {
   }
 
+  increaseTotalFood() {
+    this.total += 1;
+    this.productServices.addFoodInMenu(this.dataFood);
+  }
+
+  decreaseTotalFood() {
+    if (this.total === 0) {
+      return ;
+    }
+    this.total -= 1;
+    this.productServices.removeFoodInMenu(this.dataFood);
+  }
 }

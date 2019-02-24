@@ -17,7 +17,6 @@ export class ListFoodComponent implements OnInit {
   ngOnInit() {
     this.productServices.getListFood.subscribe((data) => {
       this.listFoods = data;
-      console.log(this.listFoods);
     });
     this.productServices.getFoodsFromServer('5c6f88c01640e2b8f679294f' , 'all');
   }

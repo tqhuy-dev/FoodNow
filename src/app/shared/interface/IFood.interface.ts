@@ -7,4 +7,5 @@ export interface IFood {
     status: Number;
     trend: Number;
     totalBooking: Number;
+    total?: number;
 }

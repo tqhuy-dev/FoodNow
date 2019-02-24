@@ -4,6 +4,7 @@ import { IFood } from '../shared/interface/IFood.interface';
 import { HttpClient } from '@angular/common/http';
 import { ApiConstant } from '../shared/constant/api.constant';
 import { IResponse } from '../shared/interface/IResponse.interface';
+import { IBill } from '../shared/interface/IBill.interface';
 
 @Injectable({
     providedIn: 'root'
@@ -11,8 +12,38 @@ import { IResponse } from '../shared/interface/IResponse.interface';
 export class ProductService {
 
     private _foods: BehaviorSubject<IFood[]> = new BehaviorSubject([]);
+    private _bill: BehaviorSubject<IBill> = new BehaviorSubject({
+        createDate: '',
+        totalMoney: 10,
+        detail: []
+    });
     get getListFood() {
         return this._foods.asObservable();
+    }
+    get getBill() {
+        return this._bill.asObservable();
+    }
+    addFoodInMenu(food: IFood) {
+        const bill = this._bill.getValue();
+        const menuFoods = bill.detail;
+        const index = menuFoods.findIndex(o => o.ID === food.ID);
+        if (index > -1) {
+            menuFoods[index].total += 1;
+        } else {
+            food.total = 1;
+            menuFoods.push(food);
+        }
+    }
+    removeFoodInMenu(food: IFood) {
+        const bill = this._bill.getValue();
+        const menuFoods = bill.detail;
+        const index = menuFoods.findIndex(o => o.ID === food.ID);
+        if (index > -1) {
+            menuFoods[index].total -= 1;
+            if (menuFoods[index].total === 0) {
+                menuFoods.splice(index , 1);
+            }
+        }
     }
 
     getFoodsFromServer(store: string , type: string) {

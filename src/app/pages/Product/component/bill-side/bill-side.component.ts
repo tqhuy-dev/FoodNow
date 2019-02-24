@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from 'src/app/services/ProductServices.services';
+import { IBill } from 'src/app/shared/interface/IBill.interface';
 
 @Component({
   selector: 'app-bill-side',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BillSideComponent implements OnInit {
 
-  constructor() { }
+  bill: IBill = {
+    totalMoney: 0,
+    createDate: '',
+    detail: []
+  };
+  constructor(
+    private productServices: ProductService
+  ) { }
 
   ngOnInit() {
+    this.productServices.getBill
+      .subscribe((data: IBill) => {
+        this.bill = data;
+      });
   }
 
 }
