@@ -1,7 +1,3 @@
 <div class="list-food-container">
-  <app-item-food></app-item-food>
-  <app-item-food></app-item-food>
-  <app-item-food></app-item-food>
-  <app-item-food></app-item-food>
-  <app-item-food></app-item-food>
+  <app-item-food *ngFor="let item of listFoods" [dataFood]="item"></app-item-food>
 </div>

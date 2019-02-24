@@ -9,4 +9,16 @@ export class ConstantValue {
     static readonly ERROR_USERNAME_MINLENGTH: String = 'username must have more than 3 character';
     static readonly ERROR_USERNAME_MAXLENGTH: String = 'username must have fewer 20 character';
     static readonly ERROR_INVALID_PASSWORD: String = 'Password is invalid';
+    static readonly STATUS_OPEN = {
+        STATUS : 'Open',
+        COLOR : 'green'
+    };
+    static readonly STATUS_CLOSED = {
+        STATUS : 'Closed',
+        COLOR : 'red'
+    };
+    static readonly STATUS_OVER_STOCK = {
+        STATUS : 'Active in 5 minutes',
+        COLOR : 'red'
+    };
 }

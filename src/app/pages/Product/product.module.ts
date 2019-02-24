@@ -11,6 +11,9 @@ import { ListFoodComponent } from '../Product/component/list-food/list-food.comp
 import { DetailFoodComponent } from '../Product/component/detail-food/detail-food.component';
 import { BookingFoodSideComponent } from '../Product/component/booking-food-side/booking-food-side.component';
 import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { StatusPipe } from 'src/app/shared/pipe/status.pipe';
+import { TrendPipe } from 'src/app/shared/pipe/trend.pipe';
+import { StatusDirective } from 'src/app/shared/directive/StatusDirective.directive';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
         ItemFoodComponent,
         ListFoodComponent,
         DetailFoodComponent,
-        BookingFoodSideComponent
+        BookingFoodSideComponent,
+        StatusPipe,
+        TrendPipe,
+        StatusDirective
     ],
     providers: [],
 })

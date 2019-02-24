@@ -1,5 +1,5 @@
 <mat-form-field>
-  <mat-select placeholder="{{placeHolderMenu}}">
+  <mat-select placeholder="{{placeHolderMenu}}" [value]="itemArray[0]">
     <mat-option *ngFor="let item of itemArray" [value]="item">
       {{item}}
     </mat-option>
