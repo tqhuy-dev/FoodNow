@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MenuBarComponent implements OnInit {
 
-  menuItem = ['product' , 'cart' , 'information' , 'log' , 'Log out'];
+  menuItem = ['product' , 'cart' , 'information' , 'log'];
   constructor() { }
 
   ngOnInit() {

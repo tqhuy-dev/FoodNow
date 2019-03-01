@@ -10,10 +10,11 @@ import { ItemFoodComponent } from '../Product/component/item-food/item-food.comp
 import { ListFoodComponent } from '../Product/component/list-food/list-food.component';
 import { DetailFoodComponent } from '../Product/component/detail-food/detail-food.component';
 import { BookingFoodSideComponent } from '../Product/component/booking-food-side/booking-food-side.component';
-import { NgbPaginationModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbPaginationModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StatusPipe } from 'src/app/shared/pipe/status.pipe';
 import { TrendPipe } from 'src/app/shared/pipe/trend.pipe';
 import { StatusDirective } from 'src/app/shared/directive/StatusDirective.directive';
+import { CheckoutModalComponent } from '../Product/component/checkout-modal/checkout-modal.component';
 
 
 @NgModule({
@@ -21,8 +22,10 @@ import { StatusDirective } from 'src/app/shared/directive/StatusDirective.direct
         ShareModule,
         ProductRoutingModule,
         AngularMaterialModule,
-        NgbPaginationModule
+        NgbPaginationModule,
+        NgbModule
     ],
+    entryComponents: [CheckoutModalComponent],
     exports: [],
     declarations: [
         ProductPaigeComponent,
@@ -35,7 +38,8 @@ import { StatusDirective } from 'src/app/shared/directive/StatusDirective.direct
         BookingFoodSideComponent,
         StatusPipe,
         TrendPipe,
-        StatusDirective
+        StatusDirective,
+        CheckoutModalComponent,
     ],
     providers: [],
 })

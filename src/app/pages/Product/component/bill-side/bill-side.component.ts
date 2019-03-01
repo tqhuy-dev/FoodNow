@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from 'src/app/services/ProductServices.services';
 import { IBill } from 'src/app/shared/interface/IBill.interface';
+import { NgbActiveModal , NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CheckoutModalComponent } from '../checkout-modal/checkout-modal.component';
 
 @Component({
   selector: 'app-bill-side',
@@ -15,7 +17,8 @@ export class BillSideComponent implements OnInit {
     detail: []
   };
   constructor(
-    private productServices: ProductService
+    private productServices: ProductService,
+    private modalServices: NgbModal
   ) { }
 
   ngOnInit() {
@@ -25,4 +28,8 @@ export class BillSideComponent implements OnInit {
       });
   }
 
+  checkoutModal() {
+    const checkOutValue = this.modalServices.open(CheckoutModalComponent);
+    checkOutValue.componentInstance.price = this.bill.totalMoney;
+  }
 }

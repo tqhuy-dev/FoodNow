@@ -3,8 +3,8 @@ export interface IFood {
     IDStore: String;
     name: String;
     type: String;
-    price:  Number;
-    status: Number;
+    price:  number;
+    status: number;
     trend: Number;
     totalBooking: Number;
     total?: number;

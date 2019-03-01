@@ -14,7 +14,7 @@ export class ProductService {
     private _foods: BehaviorSubject<IFood[]> = new BehaviorSubject([]);
     private _bill: BehaviorSubject<IBill> = new BehaviorSubject({
         createDate: '',
-        totalMoney: 10,
+        totalMoney: 0,
         detail: []
     });
     get getListFood() {
@@ -33,6 +33,7 @@ export class ProductService {
             food.total = 1;
             menuFoods.push(food);
         }
+        bill.totalMoney = bill.totalMoney + food.price;
     }
     removeFoodInMenu(food: IFood) {
         const bill = this._bill.getValue();
@@ -44,6 +45,7 @@ export class ProductService {
                 menuFoods.splice(index , 1);
             }
         }
+        bill.totalMoney = bill.totalMoney - food.price;
     }
 
     getFoodsFromServer(store: string , type: string) {

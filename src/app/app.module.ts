@@ -8,6 +8,7 @@ import { ShareModule } from './shared/share.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MainModule } from './pages/Main/main.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
     ShareModule,
     NoopAnimationsModule,
     MainModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]

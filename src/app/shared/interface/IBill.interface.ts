@@ -2,6 +2,6 @@ import { IFood } from './IFood.interface';
 
 export interface IBill {
     createDate: String;
-    totalMoney: Number;
+    totalMoney: number;
     detail: IFood[];
 }

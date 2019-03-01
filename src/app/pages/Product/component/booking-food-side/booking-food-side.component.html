@@ -1,6 +1,6 @@
 <div class="cart on-cart">Add to cart</div>
 <div class="booking-food">
-  <button (click)="increaseTotalFood()" class="btn btn-primary">+</button>
+  <button [disabled]="dataFood.status === 0" (click)="increaseTotalFood()" class="btn btn-primary">+</button>
   <input type="number" class="form-control" disabled=true value="{{total}}">
-  <button (click)="decreaseTotalFood()" class="btn btn-primary">-</button>
+  <button [disabled]="dataFood.status === 0" (click)="decreaseTotalFood()" class="btn btn-primary">-</button>
 </div>

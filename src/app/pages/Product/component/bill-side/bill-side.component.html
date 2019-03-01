@@ -1,9 +1,9 @@
 <div class="bill-container">
   <div class="total">Total</div>
   <div class="price">{{bill.totalMoney}}</div>
-  <div class="check-out">Check Out</div>
+  <div class="check-out" (click)="checkoutModal()">Check Out</div>
 
   <ul>
-      <li *ngFor="let item of bill.detail">{{item.name}} x {{item.total}}</li>
+      <li *ngFor="let item of bill.detail">{{item.name}} x {{item.total}} {{item.price*item.total}}</li>
   </ul>
 </div>

@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ProductService } from 'src/app/services/ProductServices.services';
 import { IFood } from 'src/app/shared/interface/IFood.interface';
+import { ConstantValue } from 'src/app/shared/constant/constant';
 
 @Component({
   selector: 'app-booking-food-side',
