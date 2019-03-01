@@ -15,7 +15,7 @@ import { StatusPipe } from 'src/app/shared/pipe/status.pipe';
 import { TrendPipe } from 'src/app/shared/pipe/trend.pipe';
 import { StatusDirective } from 'src/app/shared/directive/StatusDirective.directive';
 import { CheckoutModalComponent } from '../Product/component/checkout-modal/checkout-modal.component';
-
+import { ImageCropperComponent } from 'ngx-img-cropper';
 
 @NgModule({
     imports: [
@@ -23,7 +23,7 @@ import { CheckoutModalComponent } from '../Product/component/checkout-modal/chec
         ProductRoutingModule,
         AngularMaterialModule,
         NgbPaginationModule,
-        NgbModule
+        NgbModule,
     ],
     entryComponents: [CheckoutModalComponent],
     exports: [],
@@ -40,6 +40,7 @@ import { CheckoutModalComponent } from '../Product/component/checkout-modal/chec
         TrendPipe,
         StatusDirective,
         CheckoutModalComponent,
+        ImageCropperComponent
     ],
     providers: [],
 })
